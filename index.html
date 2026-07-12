@@ -95,7 +95,7 @@
             </div>
             <div class="hero-image-wrapper">
                 <!-- Imagem 1: Profissional -->
-                <img src="https://i.ibb.co/RGQkpdrx/Hero.jpg" alt="Dentista Profissional" class="hero-image"
+                <img src="https://i.ibb.co/20c17HVD/Hero.jpg" alt="Dentista Profissional" class="hero-image"
                     width="1024" height="1024" fetchpriority="high"
                     style="object-fit: cover;">
             </div>
@@ -107,7 +107,7 @@
         <div class="container">
             <div class="sobre-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
                 <div class="sobre-image" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-lg); height: 500px;">
-                    <img src="https://i.ibb.co/RGQkpdrx/Hero.jpg" alt="Equipe Odonto Prime" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    <img src="https://i.ibb.co/20c17HVD/Hero.jpg" alt="Equipe Odonto Prime" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                 </div>
                 <div class="sobre-content">
                     <h2 style="margin-bottom: 20px; font-size: 2.5rem; font-weight: 700;">Excelência e Cuidado em Cada Detalhe</h2>
@@ -164,11 +164,11 @@
             </div>
             <div class="gallery-grid">
                 <!-- Imagem 2: Antes e Depois -->
-                <img src="https://i.ibb.co/0pFWF54t/Antes-e-depois.jpg" alt="Antes e Depois Lentes de Contato"
+                <img src="https://i.ibb.co/6c1p1Q9B/Antes-e-depois.jpg" alt="Antes e Depois Lentes de Contato"
                     class="gallery-item" loading="lazy"
                     style="object-fit: cover; width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
                 <!-- Imagem 3: Antes e Depois -->
-                <img src="https://i.ibb.co/C5h854s5/Clareamento.jpg" alt="Antes e Depois Clareamento"
+                <img src="https://i.ibb.co/27gh7RY7/Clareamento.jpg" alt="Antes e Depois Clareamento"
                     class="gallery-item" loading="lazy"
                     style="object-fit: cover; width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
             </div>
@@ -271,15 +271,15 @@
                 <div class="contact-form-container" style="background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
                     <h3 style="margin-bottom: 20px;">Envie uma Mensagem</h3>
                     <form class="contact-form" action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-                        <input type="text" name="nome" placeholder="Seu Nome Completo" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem;">
-                        <input type="tel" name="telefone" placeholder="Seu WhatsApp" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem;">
-                        <select name="assunto" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem; background: white;">
+                        <input type="text" name="nome" placeholder="Seu Nome Completo" aria-label="Seu Nome Completo" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        <input type="tel" name="telefone" placeholder="Seu WhatsApp" aria-label="Seu WhatsApp" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        <select name="assunto" aria-label="Motivo do contato" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem; background: white;">
                             <option value="">Qual o motivo do contato?</option>
                             <option value="Agendamento">Agendamento de Avaliação</option>
                             <option value="Duvida">Dúvida sobre Tratamento</option>
                             <option value="Outros">Outros</option>
                         </select>
-                        <textarea name="mensagem" placeholder="Sua Mensagem (Opcional)" rows="4" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: none;"></textarea>
+                        <textarea name="mensagem" placeholder="Sua Mensagem (Opcional)" aria-label="Sua Mensagem" rows="4" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: none;"></textarea>
                         <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">Solicitar Contato</button>
                     </form>
                 </div>
@@ -322,8 +322,8 @@
                 </div>
                 <p>&copy; 2026 Odonto Prime. Todos os direitos reservados.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Visitar Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Visitar Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
