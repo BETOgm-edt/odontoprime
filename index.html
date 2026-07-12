@@ -6,8 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odonto Prime | Clínica Odontológica de Excelência</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <meta name="description"
-        content="Transforme seu sorriso na Odonto Prime. Especialistas em estética dental, implantes e ortodontia. Agende sua avaliação!">
+    <meta name="description" content="Transforme seu sorriso na Odonto Prime. Especialistas em estética dental, implantes e ortodontia. Agende sua avaliação!">
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Odonto Prime | Clínica Odontológica">
+    <meta property="og:description" content="Transforme seu sorriso com os melhores especialistas em estética e implantes.">
+    <meta property="og:type" content="website">
+    
+    <!-- Analytics & Pixel (Placeholders) -->
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'XXXXXXXXXXXXXXXX');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,11 +53,12 @@
             </div>
             <nav class="nav-links">
                 <a href="#hero">Início</a>
+                <a href="#sobre">Sobre Nós</a>
                 <a href="#services">Tratamentos</a>
-                <a href="#before-after">Antes e Depois</a>
+                <a href="#before-after">Resultados</a>
                 <a href="#reviews">Avaliações</a>
                 <a href="#faq">FAQ</a>
-                <a href="#location">Localização</a>
+                <a href="#contact">Contato</a>
             </nav>
             <a href="https://wa.me/12991279309" class="btn btn-primary nav-cta" target="_blank">Agendar Avaliação</a>
         </div>
@@ -62,6 +92,27 @@
                 <!-- Imagem 1: Profissional -->
                 <img src="https://i.ibb.co/RGQkpdrx/Hero.jpg" alt="Dentista Profissional" class="hero-image"
                     style="object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós (Institucional) -->
+    <section id="sobre" class="sobre section bg-light">
+        <div class="container">
+            <div class="sobre-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div class="sobre-image" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-lg); height: 500px;">
+                    <img src="https://i.ibb.co/RGQkpdrx/Hero.jpg" alt="Equipe Odonto Prime" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <div class="sobre-content">
+                    <h2 style="margin-bottom: 20px; font-size: 2.5rem; font-weight: 700;">Excelência e Cuidado em Cada Detalhe</h2>
+                    <p style="margin-bottom: 20px;">Na Odonto Prime, não apenas tratamos dentes, nós transformamos vidas através do sorriso. Com mais de 15 anos de tradição, nossa equipe de especialistas é referência em tratamentos estéticos e reabilitação oral avançada.</p>
+                    <p style="margin-bottom: 30px;">Nosso compromisso é com o seu conforto, utilizando tecnologia de ponta e materiais premium para garantir resultados perfeitos, duradouros e naturais.</p>
+                    <ul style="list-style: none; margin-bottom: 30px;">
+                        <li style="margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Especialistas altamente qualificados</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Equipamentos de última geração</li>
+                        <li style="font-size: 1.1rem;"><i class="fa-solid fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Atendimento humanizado e personalizado</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -108,11 +159,11 @@
             <div class="gallery-grid">
                 <!-- Imagem 2: Antes e Depois -->
                 <img src="https://i.ibb.co/0pFWF54t/Antes-e-depois.jpg" alt="Antes e Depois Lentes de Contato"
-                    class="gallery-item"
+                    class="gallery-item" loading="lazy"
                     style="object-fit: cover; width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
                 <!-- Imagem 3: Antes e Depois -->
                 <img src="https://i.ibb.co/C5h854s5/Clareamento.jpg" alt="Antes e Depois Clareamento"
-                    class="gallery-item"
+                    class="gallery-item" loading="lazy"
                     style="object-fit: cover; width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
             </div>
         </div>
@@ -202,28 +253,46 @@
         </div>
     </section>
 
-    <!-- Localização e Contato -->
-    <section id="location" class="location section">
+    <!-- Formulário e Localização -->
+    <section id="contact" class="location section">
         <div class="container">
-            <div class="location-wrapper">
+            <div class="section-header">
+                <h2>Fale Conosco e Agende</h2>
+                <p>Estamos prontos para te atender. Preencha o formulário ou visite nossa clínica.</p>
+            </div>
+            <div class="location-wrapper" style="align-items: flex-start;">
+                <!-- Formulário -->
+                <div class="contact-form-container" style="background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+                    <h3 style="margin-bottom: 20px;">Envie uma Mensagem</h3>
+                    <form class="contact-form" action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" name="nome" placeholder="Seu Nome Completo" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        <input type="tel" name="telefone" placeholder="Seu WhatsApp" required style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                        <select name="assunto" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem; background: white;">
+                            <option value="">Qual o motivo do contato?</option>
+                            <option value="Agendamento">Agendamento de Avaliação</option>
+                            <option value="Duvida">Dúvida sobre Tratamento</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <textarea name="mensagem" placeholder="Sua Mensagem (Opcional)" rows="4" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: none;"></textarea>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">Solicitar Contato</button>
+                    </form>
+                </div>
+                
+                <!-- Informações e Mapa -->
                 <div class="location-info">
-                    <h2>Venha nos Visitar</h2>
-                    <p>Estamos localizados no coração da cidade, com fácil acesso e estacionamento no local.</p>
-                    <ul class="contact-list">
-                        <li><i class="fa-solid fa-location-dot"></i> Av. Paulista, 1000 - Bela Vista, São Paulo - SP
-                        </li>
+                    <div class="location-map" style="margin-bottom: 30px;">
+                        <!-- Mapa Embutido -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1477797825096!2d-46.65476142371994!3d-23.563068778800262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                            width="100%" height="250"
+                            style="border:0; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <ul class="contact-list" style="margin-top: 0;">
+                        <li><i class="fa-solid fa-location-dot"></i> Av. Paulista, 1000 - Bela Vista, SP</li>
                         <li><i class="fa-solid fa-phone"></i> (11) 99999-9999</li>
                         <li><i class="fa-solid fa-envelope"></i> contato@odontoprime.com.br</li>
-                        <li><i class="fa-solid fa-clock"></i> Seg - Sex: 08:00 às 19:00 | Sáb: 08:00 às 13:00</li>
                     </ul>
-                </div>
-                <div class="location-map">
-                    <!-- Mapa Embutido -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1477797825096!2d-46.65476142371994!3d-23.563068778800262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
-                        width="100%" height="400"
-                        style="border:0; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
