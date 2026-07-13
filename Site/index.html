@@ -14,8 +14,16 @@
 <body>
     <header class="navbar">
         <div class="container nav-wrap">
-            <div class="logo">
-                <i class="fa-solid fa-tooth"></i> Odonto<span>Prime</span>
+            <style>
+                .logo-container { position: relative; min-width: 270px; height: 35px; display: flex; align-items: center; }
+                .logo-text-1, .logo-text-2 { position: absolute; left: 0; white-space: nowrap; animation: loopLogo 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+                .logo-text-2 { animation-name: loopLogo2; opacity: 0; transform: translateY(15px); font-size: 1.1rem; font-weight: 600; color: #a3e635; letter-spacing: 1px; text-transform: uppercase; }
+                @keyframes loopLogo { 0%, 15% { opacity: 1; transform: translateY(0); } 25%, 75% { opacity: 0; transform: translateY(-15px); } 85%, 100% { opacity: 1; transform: translateY(0); } }
+                @keyframes loopLogo2 { 0%, 15% { opacity: 0; transform: translateY(15px); } 25%, 75% { opacity: 1; transform: translateY(0); } 85%, 100% { opacity: 0; transform: translateY(-15px); } }
+            </style>
+            <div class="logo logo-container">
+                <span class="logo-text-1"><i class="fa-solid fa-tooth"></i> Odonto<span>Prime</span></span>
+                <span class="logo-text-2">Demonstração de Design</span>
             </div>
             <nav class="nav-links">
                 <a href="#about">Sobre</a>
