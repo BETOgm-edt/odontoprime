@@ -3,45 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odonto Prime | Hub de Versões</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Odonto Prime | Hub de Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
-        body { background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
-        .container { max-width: 900px; padding: 40px; }
-        h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px; }
-        h1 span { color: #38bdf8; }
-        p.subtitle { color: #94a3b8; font-size: 1.2rem; margin-bottom: 50px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 50px 30px; border-radius: 24px; text-decoration: none; color: white; transition: 0.4s; display: block; }
-        .card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .card h2 { font-size: 2rem; margin-bottom: 15px; }
-        .card p { font-size: 1rem; color: #cbd5e1; margin-bottom: 0; }
-        .v1 h2 { color: #60a5fa; }
-        .v2 h2 { color: #34d399; }
-        .v3 h2 { color: #2dd4bf; }
+        body, html { width: 100%; height: 100%; overflow: hidden; background: #0f172a; }
+        
+        #frame-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        .transition-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #0f172a;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .transition-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top: 3px solid #38bdf8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* Floating Controller */
+        .hub-controller {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            z-index: 200;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .hub-info {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            min-width: 140px;
+        }
+        .hub-info span {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .btn-next {
+            background: white;
+            color: #0f172a;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-next:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255,255,255,0.3);
+        }
+        
+        .dots {
+            display: flex;
+            gap: 8px;
+            padding-right: 10px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        .dot {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dot.active {
+            background: #38bdf8;
+            transform: scale(1.4);
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Odonto<span>Prime</span></h1>
-        <p class="subtitle">Bem-vindo ao hub de demonstração. Selecione o layout que deseja visualizar:</p>
-        <div class="grid">
-            <a href="Site/index.html" class="card v1">
-                <h2>Versão 1</h2>
-                <p>Design Imersivo com painéis em Glassmorphism e tons de Azul.</p>
-            </a>
-            <a href="Site v2/index.html" class="card v2">
-                <h2>Versão 2</h2>
-                <p>Estilo Boutique e Editorial Premium com tipografia gigante e cores terra/esmeralda.</p>
-            </a>
-            <a href="Site v3/index.html" class="card v3">
-                <h2>Versão 3</h2>
-                <p>Clínico Minimalista e Clean, ultra leve e sofisticado.</p>
-            </a>
-        </div>
+    
+    <div id="frame-container">
+        <iframe id="project-frame" src="Site/index.html"></iframe>
     </div>
+
+    <div class="transition-overlay" id="overlay">
+        <div class="loader"></div>
+    </div>
+
+    <div class="hub-controller">
+        <div class="dots">
+            <div class="dot active" id="dot-0"></div>
+            <div class="dot" id="dot-1"></div>
+            <div class="dot" id="dot-2"></div>
+        </div>
+        <div class="hub-info">
+            <span>Visualizando Layout</span>
+            <div id="current-name">v1 - Imersivo</div>
+        </div>
+        <button class="btn-next" onclick="nextProject()" aria-label="Próximo Layout">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <script>
+        const projects = [
+            { url: 'Site/index.html', name: 'v1 - Imersivo' },
+            { url: 'Site v2/index.html', name: 'v2 - Boutique' },
+            { url: 'Site v3/index.html', name: 'v3 - Minimalista' }
+        ];
+        
+        let currentIndex = 0;
+        const frame = document.getElementById('project-frame');
+        const overlay = document.getElementById('overlay');
+        const nameLabel = document.getElementById('current-name');
+        
+        function nextProject() {
+            // Start fluid transition (fade to dark)
+            overlay.classList.add('active');
+            
+            setTimeout(() => {
+                // Change source while dark
+                currentIndex = (currentIndex + 1) % projects.length;
+                frame.src = projects[currentIndex].url;
+                nameLabel.textContent = projects[currentIndex].name;
+                
+                // Update navigation dots
+                document.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+                
+            }, 600); // Waits for overlay to become fully opaque
+        }
+        
+        // Remove overlay once new iframe page has loaded
+        frame.addEventListener('load', () => {
+            if(overlay.classList.contains('active')) {
+                // Slight delay for smooth visual transition inside iframe
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                }, 300);
+            }
+        });
+    </script>
 </body>
 </html>
