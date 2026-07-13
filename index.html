@@ -132,37 +132,30 @@
         
         /* AURYA Badge */
         .aurya-badge {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 10px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-            color: white;
             text-decoration: none;
             display: flex;
             flex-direction: column;
-            z-index: 200;
+            padding-right: 25px;
+            margin-right: 10px;
+            border-right: 1px solid rgba(255,255,255,0.1);
             transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        .aurya-badge:hover {
-            border-color: #38bdf8;
-            transform: translateY(-3px);
+        .aurya-badge:hover strong {
+            color: #38bdf8;
         }
         .aurya-badge span {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #94a3b8;
             margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .aurya-badge strong {
             font-size: 0.95rem;
             font-weight: 700;
             color: white;
             letter-spacing: 0.5px;
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -176,13 +169,11 @@
         <div class="loader"></div>
     </div>
 
-    <!-- AURYA Badge -->
-    <a href="https://aurya.qzz.io/" target="_blank" class="aurya-badge">
-        <span>Site por Beto Vitor</span>
-        <strong>Agência AURYA</strong>
-    </a>
-
     <div class="hub-controller">
+        <a href="https://aurya.qzz.io/" target="_blank" class="aurya-badge" title="Visitar Portfólio">
+            <span>By Beto Vitor</span>
+            <strong>Agência AURYA</strong>
+        </a>
         <div class="dots">
             <div class="dot active" id="dot-0"></div>
             <div class="dot" id="dot-1"></div>
