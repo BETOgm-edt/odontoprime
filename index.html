@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odonto Prime | Hub de Versões</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+        .container { max-width: 900px; padding: 40px; }
+        h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px; }
+        h1 span { color: #38bdf8; }
+        p.subtitle { color: #94a3b8; font-size: 1.2rem; margin-bottom: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 50px 30px; border-radius: 24px; text-decoration: none; color: white; transition: 0.4s; display: block; }
+        .card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .card h2 { font-size: 2rem; margin-bottom: 15px; }
+        .card p { font-size: 1rem; color: #cbd5e1; margin-bottom: 0; }
+        .v1 h2 { color: #60a5fa; }
+        .v2 h2 { color: #34d399; }
+        .v3 h2 { color: #2dd4bf; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Odonto<span>Prime</span></h1>
+        <p class="subtitle">Bem-vindo ao hub de demonstração. Selecione o layout que deseja visualizar:</p>
+        <div class="grid">
+            <a href="Site/index.html" class="card v1">
+                <h2>Versão 1</h2>
+                <p>Design Imersivo com painéis em Glassmorphism e tons de Azul.</p>
+            </a>
+            <a href="Site v2/index.html" class="card v2">
+                <h2>Versão 2</h2>
+                <p>Estilo Boutique e Editorial Premium com tipografia gigante e cores terra/esmeralda.</p>
+            </a>
+            <a href="Site v3/index.html" class="card v3">
+                <h2>Versão 3</h2>
+                <p>Clínico Minimalista e Clean, ultra leve e sofisticado.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
