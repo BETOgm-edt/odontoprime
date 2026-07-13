@@ -176,6 +176,54 @@
             letter-spacing: 0.5px;
             transition: 0.3s;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hub-controller {
+                width: 92%;
+                bottom: 20px;
+                padding: 10px 15px;
+                gap: 12px;
+                border-radius: 20px;
+                justify-content: space-between;
+            }
+            .aurya-badge {
+                padding-right: 12px;
+                margin-right: 0;
+            }
+            .aurya-badge span {
+                display: none;
+            }
+            .aurya-badge strong {
+                font-size: 0.75rem;
+            }
+            .dots {
+                display: none;
+            }
+            .hub-info {
+                min-width: auto;
+                flex: 1;
+            }
+            .hub-info span {
+                font-size: 0.6rem;
+            }
+            #current-name {
+                font-size: 0.85rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 110px;
+            }
+            .btn-next {
+                padding: 0 15px;
+                height: 40px;
+                font-size: 0.8rem;
+                gap: 5px;
+            }
+            .aurya-loader {
+                width: 100px;
+            }
+        }
     </style>
 </head>
 <body>
