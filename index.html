@@ -129,6 +129,41 @@
             background: #38bdf8;
             transform: scale(1.4);
         }
+        
+        /* AURYA Badge */
+        .aurya-badge {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            z-index: 200;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .aurya-badge:hover {
+            border-color: #38bdf8;
+            transform: translateY(-3px);
+        }
+        .aurya-badge span {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-bottom: 2px;
+        }
+        .aurya-badge strong {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -141,6 +176,12 @@
         <div class="loader"></div>
     </div>
 
+    <!-- AURYA Badge -->
+    <a href="https://aurya.qzz.io/" target="_blank" class="aurya-badge">
+        <span>Site por Beto Vitor</span>
+        <strong>Agência AURYA</strong>
+    </a>
+
     <div class="hub-controller">
         <div class="dots">
             <div class="dot active" id="dot-0"></div>
@@ -149,7 +190,7 @@
         </div>
         <div class="hub-info">
             <span>Layout Atual</span>
-            <div id="current-name">Boutique Elegance</div>
+            <div id="current-name">Estética Premium</div>
         </div>
         <button class="btn-next" onclick="nextProject()">
             Ver Próximo <i class="fa-solid fa-arrow-right"></i>
@@ -158,9 +199,9 @@
 
     <script>
         const projects = [
-            { url: 'Site v2/index.html', name: 'Boutique Elegance' },
-            { url: 'Site/index.html', name: 'Futurista & High-Tech' },
-            { url: 'Site v3/index.html', name: 'Clean Minimalista' }
+            { url: 'Site v2/index.html', name: 'Estética Premium' },
+            { url: 'Site/index.html', name: 'Odontologia Digital' },
+            { url: 'Site v3/index.html', name: 'Clínica Especializada' }
         ];
         
         let currentIndex = 0;
